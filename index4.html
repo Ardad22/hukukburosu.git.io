@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seviyorum</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .bg {
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background-color: #FF6347;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+        .button:hover {
+            background-color: #FF4500;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg" id="background" onclick="changeBackground()">
+        <button class="button" id="loveButton" onclick="goToLovePage()">Ben de seni seviyorum</button>
+    </div>
+
+    <script>
+        const backgrounds = [
+            'images/5.jpeg',
+            'images/6.jpeg',
+            'images/7.jpeg',
+            'images/8.jpeg',
+            'images/9.jpeg'
+        ];
+        let currentIndex = 0;
+
+        document.getElementById('background').style.backgroundImage = `url(${backgrounds[currentIndex]})`;
+
+        function changeBackground() {
+            currentIndex++;
+            if (currentIndex < backgrounds.length) {
+                document.getElementById('background').style.backgroundImage = `url(${backgrounds[currentIndex]})`;
+            }
+            if (currentIndex === backgrounds.length) {
+                document.getElementById('loveButton').style.display = 'block';
+            }
+        }
+
+        function goToLovePage() {
+            window.location.href = "index5.html";
+        }
+    </script>
+</body>
+</html>

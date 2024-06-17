@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoşgeldiniz</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .bg {
+            background-image: url('images/2.jpeg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <button class="button" onclick="goToPage()">Neler oluyor</button>
+    </div>
+
+    <script>
+        function goToPage() {
+            window.location.href = "index3.html";
+        }
+    </script>
+</body>
+</html>
